@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <title>드롭다운 내비게이션</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    * {
+      font-family: '맑은 고딕', '굴림', '중고딕';
+    }
+    #wrap {
+      float: left;
+      position: absolute;
+      width: 800px;
+      left: 50%;
+      margin-left: -400px;
+    }
+    #navi,
+    #navi ul,
+    #navi ul li {
+      margin: 0;
+      padding: 0;
+    }
+    /*네비게이션 초기화*/
+    #navi {
+      background: #e82c0c;
+      padding-bottom: 3px;
+    }
+    /*네비게이션 배경과 밑줄*/
+    #navi:before,
+    #navi:after,
+    #navi>ul:before,
+    #navi>ul:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    /*틀을 유지*/
+    #navi ul {
+      background: #333333;
+      list-style: none;
+    }
+
+    #navi ul li {
+      float: left;
+      position: relative;
+    }
+
+    /*리스트 가로 정렬*/
+
+    #navi ul li a {
+      padding: 23px 26px;
+      display: block;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+      line-height: 1 8px;
+    }
+
+    #navi>ul>li:hover>a {
+      background: #e82c0c;
+    }
+    /*메인메뉴 마우스오버*/
+    #navi>ul>li.active>a,
+    #navi>ul>li>a:active {
+      background: #bfbab5;
+      color: #333333;
+    }
+
+    /*메인메뉴 클릭 시 배경*/
+    /*서브메뉴 CSS*/
+    #navi>ul ul {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      background: #333333;
+    }
+    #navi>ul li:hover ul {
+      opacity: 1;
+      visibility: visible;
+      top: 64px;
+      left: 0;
+    }
+    /*paddiing(46)+line-height(18)*/
+    #navi>ul ul li a {
+      padding: 18px 26px;
+      display: block;
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+      width: 150px;
+      border-left: 4px solid transparent;
+      transition: all 0.35s ease-in-out;
+      -webkit-transition: all 0.35s ease-in-out;
+      -moz-transition: all 0.35s ease-in-out;
+      -o-transition: all 0.35s ease-in-out;
+    }
+    /*하부메뉴가
+흔들리는 것을 방지, 부드럽게 이동*/
+    #navi>ul ul li:hover a {
+      border-left: 4px solid #d64e34;
+      background: #85827e;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="navi">
+      <ul>
+        <li class="active"><a href="#">HTML</a>
+          <ul>
+            <li><a href="#">HTML 1</a></li>
+            <li><a href="#">HTML 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">CSS</a>
+          <ul>
+            <li><a href="#">CSS 1</a></li>
+            <li><a href="#">CSS 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">JavaScript</a>
+          <ul>
+            <li><a href="#">JavaScript 1</a></li>
+            <li><a href="#">JavaScript 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">jQuery</a>
+          <ul>
+            <li><a href="#">jQuery 1</a></li>
+            <li><a href="#">jQuery 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--end navi-->
+  </div>
+  <!--wrap-->
+</body>
+
+</html>

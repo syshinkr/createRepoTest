@@ -1,0 +1,127 @@
+<html>
+
+<head>
+  <title>아코디언 메뉴</title>
+  <style type="text/css">
+    #accordian {
+      background: #333333;
+      width: 250px;
+      margin: 100px auto 0 auto;
+      color: white;
+      box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.6),
+      0 0 200px 1px rgba(255, 255, 255, 0.5);
+    }
+
+    /* 메뉴 스타일 */
+
+    #accordian h3 {
+      font-size: 12px;
+      line-height: 34px;
+      padding: 0 10px;
+      cursor: pointer;
+      background: #064461;
+      background: linear-gradient(#003040, #002535);
+    }
+
+    #accordian h3:hover {
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+    }
+
+    /* 아이콘폰트 스타일 */
+
+    #accordian h3 span {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    #accordian li {
+      list-style-type: none;
+    }
+
+    /* 서브메뉴 스타일 */
+
+    #accordian ul ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 11px;
+      line-height: 27px;
+      display: block;
+      padding: 0 15px;
+      -webkit-transition: all 0.15s;
+      -moz-transition: all 0.15s;
+      -o-transition: all 0.15s;
+      -ms-transition: all 0.15s;
+      transition: all 0.15s;
+    }
+
+    #accordian ul ul li a:hover {
+      background: #003545;
+      border-left: 5px solid #09c;
+    }
+
+    /* active 클래스 외에 것은 보이지 않게 하기 */
+
+    #accordian ul ul {
+      display: none;
+    }
+
+    #accordian li.active ul {
+      display: block;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function() {
+      $("#accordian h3").click(function() {
+        $("#accordian ul ul").slideUp();
+        if (!$(this).next().is(":visible")) {
+          $(this).next().slideDown();
+        }
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div id="accordian">
+    <ul>
+      <li>
+        <h3><span class="icon-dashboard"></span>Dashboard</h3>
+        <ul>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Graphs</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li class="active">
+        <h3><span class="icon-tasks"></span>Tasks</h3>
+        <ul>
+          <li><a href="#">Today's tasks</a></li>
+          <li><a href="#">Urgent</a></li>
+          <li><a href="#">Overdues</a></li>
+          <li><a href="#">Recurring</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3><span class="icon-calendar"></span>Calendar</h3>
+        <ul>
+          <li><a href="#">Team Calendar</a></li>
+          <li><a href="#">Private Calendar</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3><span class="icon-heart"></span>Favourites</h3>
+        <ul>
+          <li><a href="#">Global favs</a></li>
+          <li><a href="#">My favs</a></li>
+          <li><a href="#">Team favs</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

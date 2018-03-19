@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Basic Horizontal Menu - Teacher code</title>
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="main.js"/>
+
+  </script>
+  <style type="text/css">
+    /*전체 세팅*/
+    body {
+      background: #f1f1f1;
+      padding: 0;
+    }
+
+    nav ul {
+      margin: 0px;
+      padding: 0px;
+      width: 200px;
+      list-style: none;
+    }
+
+    .main {
+      background: #8ac007;
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      text-indent: 20px;
+      text-decoration: none;
+      color: white;
+    }
+    /*메인메뉴 클릭*/
+    .main.on {
+      background: #6c8532;
+
+    }
+    /*서브리스트들*/
+    .sub li {
+      height: 40px;
+      line-height: 40px;
+
+    }
+
+    .sub li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      text-indent: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <nav id="navi">
+    <ul>
+      <li class="menu"><a class="main" href="#">HTML</a>
+        <ul class="sub">
+          <li><a class="subLink" href="#">HTML 1</a></li>
+          <li><a class="subLink" href="#">HTML 2</a></li>
+          <li><a class="subLink" href="#">HTML 3</a></li>
+          <li><a class="subLink" href="#">HTML 4</a></li>
+          <li><a class="subLink" href="#">HTML 5</a></li>
+        </ul>
+      </li>
+
+      <li class="menu"><a class="main" href="#">CSS</a>
+        <ul class="sub">
+          <li><a class="subLink" href="#">CSS 1</a></li>
+          <li><a class="subLink" href="#">CSS 2</a></li>
+          <li><a class="subLink" href="#">CSS 3</a></li>
+          <li><a class="subLink" href="#">CSS 4</a></li>
+          <li><a class="subLink" href="#">CSS 5</a></li>
+        </ul>
+      </li>
+
+      <li class="menu"><a class="main" href="#">JavaScript</a>
+        <ul class="sub">
+          <li><a class="subLink" href="#">JavaScript 1</a></li>
+          <li><a class="subLink" href="#">JavaScript 2</a></li>
+          <li><a class="subLink" href="#">JavaScript 3</a></li>
+          <li><a class="subLink" href="#">JavaScript 4</a></li>
+          <li><a class="subLink" href="#">JavaScript 5</a></li>
+        </ul>
+      </li>
+
+      <li class="menu"><a class="main" href="#">jQuery</a>
+        <ul class="sub">
+          <li><a class="subLink" href="#">jQuery 1</a></li>
+          <li><a class="subLink" href="#">jQuery 2</a></li>
+          <li><a class="subLink" href="#">jQuery 3</a></li>
+          <li><a class="subLink" href="#">jQuery 4</a></li>
+          <li><a class="subLink" href="#">jQuery 5</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

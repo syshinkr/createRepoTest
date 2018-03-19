@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Basic Horizontal Menu</title>
+  <meta charset="utf-8" />
+</head>
+<style type="text/css">
+  * {
+    font-family: "Trebuchet MS", Dotum, Arial;
+  }
+  #wrap{float:left;position:absolute;width:800px;left:50%;margin-left:-400px;}
+
+  #navi,
+  #navi ul,
+  #navi ul li {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #navi {
+    height: 30px;
+    width: 850px;
+  }
+  #navi ul {
+    list-style-type:none;
+  }
+
+  #navi ul li {
+    color: white;
+    background-color: #99cc00;
+    float: left;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    position:relative;
+  }
+
+  #navi .menu {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  #navi>ul>li:hover {
+    color: white;
+    background-color: #008000;
+  }
+
+  li>a {
+    text-decoration: none;
+    display:block;
+    width:150px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+  }
+  .submenu {
+    position:absolute;
+    height: 0px;
+    overflow:hidden;
+    transition: height .2s;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    -o-transition: height .2s;
+  }
+  .menu:hover .submenu {
+    height:150px;
+  }
+  .subLink:hover {
+    color:white;
+    background-color: #008000;
+  }
+
+</style>
+
+<body>
+  <div></div>
+  <nav id="navi">
+    <ul>
+      <li class="menu"><a class="menuLink" href="#">HTML</a>
+        <ul class="submenu">
+          <li><a class="subLink" href="#">HTML 1</a></li>
+          <li><a class="subLink"href="#">HTML 2</a></li>
+          <li><a class="subLink" href="#">HTML 3</a></li>
+          <li><a class="subLink" href="#">HTML 4</a></li>
+          <li><a class="subLink" href="#">HTML 5</a></li>
+        </ul>
+      </li>
+
+      <li class="menu"><a class="menuLink" href="#">CSS</a>
+        <ul class="submenu">
+          <li><a class="subLink" href="#">CSS 1</a></li>
+          <li><a class="subLink" href="#">CSS 2</a></li>
+          <li><a class="subLink" href="#">CSS 3</a></li>
+          <li><a class="subLink" href="#">CSS 4</a></li>
+          <li><a class="subLink" href="#">CSS 5</a></li>
+        </ul>
+      </li>
+
+      <li class="menu"><a class="menuLink" href="#">JavaScript</a>
+        <ul class="submenu">
+          <li><a class="subLink" href="#">JavaScript 1</a></li>
+          <li><a class="subLink" href="#">JavaScript 2</a></li>
+          <li><a class="subLink" href="#">JavaScript 3</a></li>
+          <li><a class="subLink" href="#">JavaScript 4</a></li>
+          <li><a class="subLink" href="#">JavaScript 5</a></li>
+        </ul>
+      </li>
+
+      <li class="menu"><a class="menuLink" href="#">jQuery</a>
+        <ul class="submenu">
+          <li><a class="subLink" href="#">jQuery 1</a></li>
+          <li><a class="subLink" href="#">jQuery 2</a></li>
+          <li><a class="subLink" href="#">jQuery 3</a></li>
+          <li><a class="subLink" href="#">jQuery 4</a></li>
+          <li><a class="subLink" href="#">jQuery 5</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
